@@ -1,0 +1,94 @@
+<div class="home-container">
+  <header class="header">
+    <div class="header-content">
+      <span class="header-logo">ACME</span>
+      <div class="header-icons">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <button class="menu-toggle" (click)="toggleMenu()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="nav-list">
+        <li><a href="#" (click)="navigateTo('/')">Regresar</a></li>
+        <li class="logout"><a href="#">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- Central content -->
+    <div class="central-content">
+      <!-- Vehicle Form -->
+      <div class="form-container">
+        <h2>Ingreso de Vehículo</h2>
+        <form [formGroup]="vehiculoForm" (ngSubmit)="onSubmitVehiculo()">
+          <div class="form-group">
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" formControlName="placa" placeholder="Ingrese la placa" />
+          </div>
+          <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" id="color" formControlName="color" placeholder="Ingrese el color" />
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" formControlName="marca" placeholder="Ingrese la marca" />
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de Vehículo:</label>
+            <select id="tipo" formControlName="tipo">
+              <option value="particular">Particular</option>
+              <option value="publico">Público</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="conductor_id">Conductor:</label>
+            <input type="text" id="conductor_id" formControlName="conductor_id" placeholder="Ingrese el nombre del conductor" />
+          </div>
+          <div class="form-group">
+            <label for="propietario_id">Propietario:</label>
+            <input type="text" id="propietario_id" formControlName="propietario_id" placeholder="Ingrese el nombre del propietario" />
+          </div>
+          <button type="submit">Guardar Vehículo</button>
+        </form>
+      </div>
+
+      <!-- Person Form -->
+      <div class="form-container">
+        <h2>Ingreso de Persona</h2>
+        <form [formGroup]="personaForm" (ngSubmit)="onSubmitPersona()">
+          <div class="form-group">
+            <label for="dni">Número de Cédula:</label>
+            <input type="text" id="dni" formControlName="dni" placeholder="Ingrese el número de cédula" />
+          </div>
+          <div class="form-group">
+            <label for="nombre">Primer Nombre:</label>
+            <input type="text" id="nombre" formControlName="nombre" placeholder="Ingrese el primer nombre" />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" formControlName="apellido" placeholder="Ingrese el apellido" />
+          </div>
+          <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" formControlName="direccion" placeholder="Ingrese la dirección" />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" formControlName="telefono" placeholder="Ingrese el teléfono" />
+          </div>
+          <div class="form-group">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" formControlName="ciudad" placeholder="Ingrese la ciudad" />
+          </div>
+          <button type="submit">Guardar Persona</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

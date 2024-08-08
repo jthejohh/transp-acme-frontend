@@ -1,0 +1,101 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .header-logo {
+    font-weight: bold;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-icons i {
+    font-size: 1.5rem;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .menu-toggle:hover {
+    color: #d3d3d3;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .sidebar {
+    width: 300px; /* Increase the width of the sidebar */
+    background-color: #343a40;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-bottom: 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+  
+  .nav-link:hover {
+    background-color: #495057;
+    border-radius: 4px;
+  }
+  
+  .central-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 100%;
+    overflow: auto; /* Enable scroll */
+  }
+  
+  .card-title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .news-content {
+    max-height: calc(100vh - 150px); /* Adjust height for scrolling */
+    overflow-y: auto;
+    font-size: 1rem;
+  }
+  

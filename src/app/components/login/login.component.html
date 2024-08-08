@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 102%; max-width: 600px;">
+      <div class="card-body">
+        <h2 class="text-center mb-4">Iniciar Sesión</h2>
+        <div class="mb-4 w-100">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
+        </div>
+        <div class="mb-4 w-100">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+        </div>
+        <button type="button" class="btn btn-primary w-100 mb-3" (click)="onLogin()">Entrar</button>
+        <div class="text-center w-100">
+          <a href="#" class="btn btn-link" (click)="navigateToRegister($event)">¿No tienes cuenta? Regístrate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,51 @@
+<div class="home-container">
+    <header class="header">
+      <div class="header-content">
+        <span class="header-logo">ACME</span>
+        <div class="header-icons">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <button class="menu-toggle" (click)="toggleMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <ul class="nav-list">
+          <li><a href="#" (click)="navigateTo('/')">Regresar</a></li>
+          <li><a href="#" (click)="navigateTo('/login')">cerrar sesion</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Central content -->
+      <div class="central-content">
+        <div class="table-container">
+          <h3>Reporte de Ingresos</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Conductor</th>
+                <th>Propietario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí se mostrarán los datos -->
+              <tr *ngFor="let ingreso of ingresos">
+                <td>{{ ingreso.placa }}</td>
+                <td>{{ ingreso.marca }}</td>
+                <td>{{ ingreso.conductor }}</td>
+                <td>{{ ingreso.propietario }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
